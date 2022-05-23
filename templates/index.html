@@ -15,7 +15,7 @@
                             <div class="image-container">
                                 {% if "placeholder" in post.featured_image.url %}
                                 <img class="card-img-top"
-                                    src="https://res.cloudinary.com/carriecloud8348/image/upload/v1653312244/cfbox48/crossfit-management-vulnerabilities_eayotv.webp">
+                                    src="https://res.cloudinary.com/carriecloud8348/image/upload/v1653316812/cfbox48/CROSSFIT_BOX_48_WEEK_01_2022_WOD_PLAN_y8ytsy.png">
                                 {% else %}
                                 <img class="card-img-top" src=" {{ post.featured_image.url }}">
                                 {% endif %}
@@ -23,7 +23,7 @@
                                     <p class="author">Author: {{ post.author }}</p>
                                 </div>
                             </div>
-                            <a href="#" class="post-link">
+                            <a href="{% url 'post_detail' post.slug  %}" class="post-link">
                                 <h2 class="card-title">{{ post.title }}</h2>
                                 <p class="card-text">{{ post.excerpt }}</p>
                             </a>
