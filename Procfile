@@ -1,1 +1,1 @@
-web: guinicorn cfbox48.wsgi
+web: guinicorn crossfitbox48.wsgi
