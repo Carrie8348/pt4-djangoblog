@@ -12,7 +12,7 @@
     <div class="col-md-8 mt-3 offset-md-2">
       <h3>{% trans "Sign In" %}</h3>
 
-      <p>{% blocktrans %}Welcome back to the CrossfitBox48 blog. To leave a comment or like a post, please log in. If you
+      <p>{% blocktrans %}Welcome back to the code|star blog. To leave a comment or like a post, please log in. If you
         have not created an account yet, then <a class="link" href="{{ signup_url }}">sign up</a>
         first.{% endblocktrans %}</p>
     </div>
@@ -25,7 +25,7 @@
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
-        <button class="btn btn-signup btn-primary right" type="submit">{% trans "Sign In" %}</button>
+        <button class="btn btn-signup btn-dark right" type="submit">{% trans "Sign In" %}</button>
       </form>
     </div>
   </div>
