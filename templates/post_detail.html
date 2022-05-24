@@ -13,7 +13,7 @@
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <!-- The featured image URL goes in the src attribute -->
                 {% if "placeholder" in post.featured_image.url %}
-                <img src="https://res.cloudinary.com/carriecloud8348/image/upload/v1653312244/cfbox48/crossfit-management-vulnerabilities_eayotv.webp" width="100%">
+                <img src="https://res.cloudinary.com/carriecloud8348/image/upload/v1653377603/cfbox48/CROSSFIT_BOX_48_WEEK_01_2022_WOD_PLAN_v4icdf.png" width="100%">
                 {% else %}
                 <img src=" {{ post.featured_image.url }}" width="100%">
                 {% endif %}
@@ -88,7 +88,7 @@
                 <h3>Leave a comment:</h3>
                 <p>Posting as: {{ user.username }}</p>
                 <form method="post" style="margin-top: 1.3em;">
-                    {{ comment_form | crispy }}
+                    {{ comment_form }}
                     {% csrf_token %}
                     <button type="submit" class="btn btn-signup btn-lg">Submit</button>
                 </form>
