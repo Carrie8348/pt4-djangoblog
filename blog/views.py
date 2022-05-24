@@ -1,8 +1,10 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
+from taggit.models import Tag
 from .models import Post
 from .forms import CommentForm
+
 
 
 class PostList(generic.ListView):
@@ -10,7 +12,7 @@ class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1).order_by("-created_on")
     template_name = "index.html"
     paginate_by = 6
-
+   
 
 class PostDetail(View):
 
@@ -22,15 +24,16 @@ class PostDetail(View):
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True
 
+
         return render(
             request,
             "post_detail.html",
             {
                 "post": post,
                 "comments": comments,
-                "commented": False,
-                "liked": liked,
-                "comment_form": CommentForm()
+                "commented": True,
+                "comment_form": CommentForm(),
+                "liked": liked
             },
         )
     
@@ -61,7 +64,7 @@ class PostDetail(View):
                 "comments": comments,
                 "commented": True,
                 "comment_form": comment_form,
-                "liked": liked
+                "liked": liked,
             },
         )
 
