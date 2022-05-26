@@ -16,11 +16,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
     </script>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
 
 </head>
 
-<body class="d-flex flex-column h-100 main-bg ">
+<body class="d-flex flex-column h-100 main-bg" id="bg-img">
+    
 
     <!-- Navigation -->
 
@@ -60,7 +61,7 @@
     </nav>
    
 <!-- Background image -->
-    <div class="container bg-gradient-light " >
+    <div class="container bg-gradient=dark" >
         <div class="row" >
             <div class="col-md-8 offset-md-2">
                 {% for message in messages %}
@@ -75,7 +76,7 @@
         </div>
     </div>
 
-    <main class="flex-shrink-0 main-bg bg-gradient-light">
+    <main class="flex-shrink-0 ">
 
         {% block content %}
         <!-- Content Goes here -->
