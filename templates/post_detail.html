@@ -8,8 +8,12 @@
                 <!-- Post title goes in these h1 tags -->
                 <h1 class="post-title">{{ post.title }}</h1>
                 <!-- Post author goes before the | the post's created date goes after -->
-                <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
+                <p class="post-subtitle">{{ post.author.first_name }} {{ post.author.last_name }} | {{ post.created_on }}</p>
+                <a href="{% url 'home' %}">
+                    <button>Back</button>
+                </a>
             </div>
+            
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <!-- The featured image URL goes in the src attribute -->
                 {% if "placeholder" in post.featured_image.url %}
@@ -32,6 +36,7 @@
                     {{ post.content | safe }}
                 </p>
                 <div class="row">
+                    
 
                     <div class="col-1">
                         <strong>
@@ -75,6 +80,9 @@
             <hr>
         </div>
     </div>
+>
+
+
     <div class="row">
         <div class="col-md-8 card mb-4  mt-3 ">
             <h3>Comments:</h3>
@@ -84,7 +92,7 @@
                 <div class="comments" style="padding: 10px;">
                     <p class="font-weight-bold">
                         <!-- The commenter's name goes here. s -->
-                        {{ comment.name }}
+                            {{ comment.name }}
                         <span class=" text-muted font-weight-normal">
                             <!-- The comment's created date goes here -->
                             {{ comment.created_on }}

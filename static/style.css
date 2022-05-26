@@ -1,5 +1,5 @@
 body {
-    background-color: #000;
+   background-color: black;
 }
 
 .brand {
@@ -27,6 +27,10 @@ body {
 
 .main-bg {
     background-color: #445261;
+}
+
+.bg-img {
+    background-image: url("https://res.cloudinary.com/carriecloud8348/image/upload/v1653563213/cfbox48/gym_barbells_desktop_1024x640_wallpaper-1088984_jsz0t7.jpg");
 }
 
 .card {
