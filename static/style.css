@@ -1,8 +1,6 @@
 body {
-        background-color: rgb(241, 231, 231);
+   background-color: ;
 }
-
-
 
 .brand {
     font-family: Lato, sans-serif;
@@ -28,7 +26,11 @@ body {
 }
 
 .main-bg {
-    background-color: #dbdde3;
+    background-color: #445261;
+}
+
+.bg-image {
+    background-image: ;
 }
 
 .card {
@@ -59,7 +61,7 @@ body {
     overflow: hidden;
     position: relative;
     display: inline-block;
-    height: 33vh;
+    height: 36vh;
     width: 100%;
 }
 
@@ -79,8 +81,8 @@ body {
     position: absolute;
     top: 0;
     right: 90%;
-    height: 100%;
-    width: 150%;
+    height: 150%;
+    width: 100%;
     background: #445261;
     -webkit-transform: skew(15deg);
     -moz-transform: skew(15deg);
@@ -90,7 +92,6 @@ body {
 
 .post-link {
     text-decoration: none;
-    text-color: white;
     color: #445261;
 }
 
