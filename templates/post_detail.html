@@ -1,5 +1,5 @@
-{% extends 'base.html' %}
-{% block content %}
+{% extends 'base.html' %}{% block content %}
+
 {% load crispy_forms_tags %}
 
 <div class="masthead">
@@ -106,6 +106,7 @@
                     Your comment is awaiting approval!
                 </div>
                 {% else %}
+                
                 {% if user.is_authenticated %}
 
                 <h3>Leave a comment:</h3>
