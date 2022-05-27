@@ -8,9 +8,9 @@
                 <!-- Post title goes in these h1 tags -->
                 <h1 class="post-title">{{ post.title }}</h1>
                 <!-- Post author goes before the | the post's created date goes after -->
-                <p class="post-subtitle">{{ post.author.first_name }} {{ post.author.last_name }} | {{ post.created_on }}</p>
+                <p class="post-subtitle text-dark">{{ post.author.first_name }} {{ post.author.last_name }} | {{ post.created_on }}</p>
                 <a href="{% url 'home' %}">
-                    <button class="btn btn-dark">Back</button>
+                    <button class="btn btn-dark position-absolute top-100 start-50">Back</button>
                 </a>
             </div>
             
@@ -24,7 +24,7 @@
             <div class="card-body">
                 <!-- The post content goes inside the card-text. -->
                 <!-- Use the | safe filter inside the template tags -->
-                <p class="card-text">
+                <p class="card-text text-dark">
                     {{ post.content | safe }}
                 </p>
                 <div class="row">
@@ -38,27 +38,27 @@
                             {% if liked %}
 
                             <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like" >
-                                <i class="fas fa-heart"></i>
+                                <i class="fas fa-heart text-danger"></i>
                             </button>
 
                              {% else %}
 
                             <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like">
-                                <i class="far fa-heart"></i> </button>
+                                <i class="far fa-heart text-danger"></i> </button>
 
                              {% endif %}
                         </form>
 
                          {% else %}
-                        <span class="text-secondary"><i class="far fa-heart"></i></span>
+                        <span class="text-white"><i class="far fa-heart text-danger"></i></span>
                          {% endif %}
-                         <span class="text-secondary"> {{ post.number_of_likes }}</i></span>
+                         <span class="text-white"> {{ post.number_of_likes }}</i></span>
                         </strong>
 
                 </div>
                     <div class="col-1">
                         {% with comments.count as total_comments %}
-                        <strong class="text-secondary"><i class="far fa-comments"></i>
+                        <strong class="text-dark"><i class="far fa-comments"></i>
                             <!-- Our total_comments variable goes before the closing strong tag -->
                             {{ total_comments }}</strong>
                         {% endwith %}
@@ -72,7 +72,7 @@
             <hr>
         </div>
     </div>
->
+
 
 
     <div class="row">
@@ -97,7 +97,7 @@
                 {% endfor %}
             </div>
         </div>
-        <div class="col-md-4 card mb-4  mt-3 ">
+        <div class="col-md-4 card mb-4 mt-3 ">
             <div class="card-body">
                 <!-- After commented -->
                 {% if commented %}

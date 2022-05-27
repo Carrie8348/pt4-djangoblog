@@ -1,12 +1,12 @@
 body {
-   background-color: ;
+   background-color: white;
 }
 
 .brand {
     font-family: Lato, sans-serif;
     font-size: 1.4rem;
     font-weight: 700;
-    color: #fff;
+    color: white;
 }
 
 .red-o {
@@ -22,15 +22,11 @@ body {
 }
 
 .dark-bg {
-    background-color: #445261;
+    background-color: #8c8f93;
 }
 
 .main-bg {
-    background-color: #445261;
-}
-
-.bg-image {
-    background-image: ;
+    background-color: white;
 }
 
 .card {
@@ -47,7 +43,7 @@ body {
     bottom: 5%;
     min-width: 30%;
     left: -2px;
-    background-color: #23BBBB;
+    background-color: #E84610;
 }
 
 .author {
@@ -66,8 +62,8 @@ body {
 }
 
 .masthead-text {
-    background-color: #445261;
-    color: white;
+    background-color: white;
+    color: #E84610;
     position: relative;
 }
 
@@ -83,7 +79,7 @@ body {
     right: 90%;
     height: 150%;
     width: 100%;
-    background: #445261;
+    background: #f5f6f8;
     -webkit-transform: skew(15deg);
     -moz-transform: skew(15deg);
     transform: skew(15deg);
@@ -92,7 +88,7 @@ body {
 
 .post-link {
     text-decoration: none;
-    color: #445261;
+    color: black;
 }
 
 .post-link:hover,
@@ -128,7 +124,7 @@ body {
 
 .link:hover,
 .link:active {
-    color: #445261;
+    color: #f0f2f4;
     text-decoration: underline;
 }
 
