@@ -1,4 +1,5 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %}
+{% block content %}
 {% load crispy_forms_tags %}
 
 <div class="masthead">
@@ -10,7 +11,7 @@
                 <!-- Post author goes before the | the post's created date goes after -->
                 <p class="post-subtitle text-dark">{{ post.author.first_name }} {{ post.author.last_name }} | {{ post.created_on }}</p>
                 <a href="{% url 'home' %}">
-                    <button class="btn btn-dark position-absolute top-100 start-50">Back</button>
+                    <button class="btn btn-dark position-absolute top-100 start-0">Back</button>
                 </a>
             </div>
             
@@ -50,9 +51,9 @@
                         </form>
 
                          {% else %}
-                        <span class="text-white"><i class="far fa-heart text-danger"></i></span>
+                        <span class="text-dark"><i class="far fa-heart text-danger"></i></span>
                          {% endif %}
-                         <span class="text-white"> {{ post.number_of_likes }}</i></span>
+                         <span class="text-dark"> {{ post.number_of_likes }}</i></span>
                         </strong>
 
                 </div>
@@ -76,16 +77,16 @@
 
 
     <div class="row">
-        <div class="col-md-8 card mb-4  mt-3 ">
+        <div class="col-md-8 card mb-4 mt-3 ">
             <h3>Comments:</h3>
             <div class="card-body">
                 <!-- a for loop inside the empty control tags to iterate through each comment in comments -->
                 {% for comment in comments %}
                 <div class="comments" style="padding: 10px;">
-                    <p class="font-weight-bold">
+                    <p class="font-weight-bold text-black">
                         <!-- The commenter's name goes here. s -->
                             {{ comment.name }}
-                        <span class=" text-muted font-weight-normal">
+                        <span class=" text-dark font-weight-normal">
                             <!-- The comment's created date goes here -->
                             {{ comment.created_on }}
                         </span> wrote:
@@ -102,7 +103,7 @@
                 <!-- After commented -->
                 {% if commented %}
                 <div class="alert alert-success" alert-dismiss="alert" id="msg">
-                    Your comment is awaiting approval
+                    Your comment is awaiting approval!
                 </div>
                 {% else %}
                 {% if user.is_authenticated %}
