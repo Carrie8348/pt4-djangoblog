@@ -53,16 +53,16 @@ body {
 }
 
 .masthead {
-    margin-top: 10px;
+    margin-top: -90px;
     overflow: hidden;
     position: relative;
     display: inline-block;
-    height: 40vh;
+    height: 45vh;
     width: 100%;
 }
 
 .masthead-text {
-    background-color: white;
+    background-color: transparent;
     color: #E84610;
     position: relative;
 }
@@ -98,11 +98,11 @@ body {
 
 .post-title {
     margin-top: 20%;
-    margin-left: 5%;
+    margin-left: 0%;
 }
 
 .post-subtitle {
-    margin-left: 5%;
+    margin-left: 0%;
     color: lightgray;
 }
 

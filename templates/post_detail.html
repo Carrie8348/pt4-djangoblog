@@ -14,20 +14,22 @@
                     <button class="btn btn-dark position-absolute top-100 start-0">Back</button>
                 </a>
             </div>
-            
-        </div>
+            </div>        
     </div>
 </div>
 
 <div class="container">
     <div class="row">
-        <div class="col card mb-4  mt-3 left  top">
+        <div class="col card mb-4  mt-1 left top">
             <div class="card-body">
                 <!-- The post content goes inside the card-text. -->
                 <!-- Use the | safe filter inside the template tags -->
                 <p class="card-text text-dark">
                     {{ post.content | safe }}
                 </p>
+                <br>
+             
+        
                 <div class="row">
                     
 
@@ -74,8 +76,6 @@
         </div>
     </div>
 
-
-
     <div class="row">
         <div class="col-md-8 card mb-4 mt-3 ">
             <h3>Comments:</h3>
@@ -98,6 +98,7 @@
                 {% endfor %}
             </div>
         </div>
+
         <div class="col-md-4 card mb-4 mt-3 ">
             <div class="card-body">
                 <!-- After commented -->
@@ -105,16 +106,17 @@
                 <div class="alert alert-success" alert-dismiss="alert" id="msg">
                     Your comment is awaiting approval!
                 </div>
-                {% else %}
-                
+                {% else %}              
                 {% if user.is_authenticated %}
 
                 <h3>Leave a comment:</h3>
                 <p>Posting as: {{ user.username }}</p>
                 <form method="post" style="margin-top: 1.3em;">
+                    {{ comment_form | crispy }}
                     {% csrf_token %}
                     <button type="submit" class="btn btn-signup btn-dark btn-lg">Submit</button>
                 </form>
+
                 {% endif %}
                 {% endif %}
             </div>
