@@ -1,9 +1,10 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
+from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from .models import Post, Profile
-from .forms import CommentForm, UpdateUserForm
+from .forms import CommentForm, ProfileForm
 
 
 
@@ -80,16 +81,27 @@ class PostLike(View):
 
 @login_required
 def profile(request):
-    if request.method == 'POST':
-        user_form = UpdateUserForm(request.POST, instance=request.user.profile)
-
-        if user_form.is_valid():
-            user_form.save()
-            message.success(request, 'Your profile is updated successfully')
-            return redirect(to='user_profile')
-    else:
-        user_form = UpdateUserForm(instance=request.user)
     
-    return render(request, "user_profile.html", {'user_form': user_form})
+    return render(request, "user_profile.html", )
 
+@login_required
+def profile_update(request, pk):
+    
+    user = get_object_or_404(User, pk=pk)
+
+    if request.method == "POST":
+        form = ProfileForm(request.POST)
+    
+        if form.is_valid():
+            user.first_name = form.cleaned_data['first_name']
+            user.last_name = form.cleaned_data['last_name']
+            user.save()
+        
+            return HttpResponseRedirect('user_profile', args=[user.id])
+    
+    else:
+        default_data = {'first_name': user.first_name, 'last_name': user.last_name }
+        form = ProfileForm(default_data)
+    
+    return render(request, 'edit_profile.html', {'form': form, 'user': user})
 

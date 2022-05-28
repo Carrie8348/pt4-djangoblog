@@ -49,9 +49,6 @@ class Comment(models.Model):
 
 class Profile(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    name = models.CharField(max_length=100, null=False, blank=False)
-    email = models.CharField(max_length=150, null=False, blank=False)
-    approved = models.BooleanField(default=False)
-
+    
     def __str__(self):
         return self.user.username
