@@ -2,9 +2,9 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
-from .models import Post
-from .forms import CommentForm
-from django.contrib.auth.forms import UserChangeForm
+from .models import Post, Profile
+from .forms import CommentForm, UpdateUserForm
+
 
 
 class PostList(generic.ListView):
@@ -77,6 +77,19 @@ class PostLike(View):
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
+
 @login_required
 def profile(request):
-    return render(request, "user_profile.html")
+    if request.method == 'POST':
+        user_form = UpdateUserForm(request.POST, instance=request.user.profile)
+
+        if user_form.is_valid():
+            user_form.save()
+            message.success(request, 'Your profile is updated successfully')
+            return redirect(to='user_profile')
+    else:
+        user_form = UpdateUserForm(instance=request.user)
+    
+    return render(request, "user_profile.html", {'user_form': user_form})
+
+

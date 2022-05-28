@@ -48,9 +48,10 @@ class Comment(models.Model):
         return f"Comment {self.body} by {self.name}"
 
 class Profile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    name = models.CharField(max_length=100, null=False, blank=False)
+    email = models.CharField(max_length=150, null=False, blank=False)
+    approved = models.BooleanField(default=False)
 
     def __str__(self):
         return self.user.username
-
-

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% endblock %}
+
+{% block content %}
+<div class="page-top-banner">
+    <h1 class="p-5">Update Profile Information</h1>
+</div>
+    <div class="edit-profile-container">
+        <form method="POST" action="{% url 'edit_profile' request.user %}" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% for field in form %}
+                {{ field | as_crispy_field }}
+            {% endfor %}
+            <button type="submit" class="btn mb-4">Update</button>
+        </form>
+    </div>
+{% endblock %}

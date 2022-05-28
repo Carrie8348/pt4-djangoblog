@@ -8,18 +8,29 @@
 
 <div class="container">
     <div class="row">
-        <div class="col card mb-4  mt-4 left top">
+        <div class="col card mb-4  mt-1 left top">
             <div class="card-body">
                 <p class="card-text text-dark">
-                    Your Comments:
+                   User Name: {{ user }}
+                   <br>
+                   Email: {{ user.email }}
+                  
                 </p>
-               
             </div>
-
-        </div>
+                <br>
+                <div class="form-group">
+                    <form method="POST">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                    <a href="edit_profile.html">
+                    <button class="btn btn-dark position-absolute top-100 start-0">Edit</button></a>
+                    </form>
+                        </div> 
+                    </div>       
+                </div>
+            </div>
     </div>
-</div>
-
+   
 
 
 
