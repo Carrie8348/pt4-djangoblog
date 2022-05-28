@@ -1,4 +1,6 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %}
+
+{% block content %}
 {% load crispy_forms_tags %}
 
 <div class="masthead">
@@ -8,12 +10,13 @@
                 <!-- Post title goes in these h1 tags -->
                 <h1 class="post-title">{{ post.title }}</h1>
                 <!-- Post author goes before the | the post's created date goes after -->
+                
                 <p class="post-subtitle text-dark">{{ post.author.first_name }} {{ post.author.last_name }} | {{ post.created_on }}</p>
                 <a href="{% url 'home' %}">
                     <button class="btn btn-dark position-absolute top-100 start-0">Back</button>
                 </a>
-            </div>
-            </div>        
+            </div> 
+        </div>       
     </div>
 </div>
 
