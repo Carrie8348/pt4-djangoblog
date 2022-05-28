@@ -3,15 +3,23 @@
 {% endblock %}
 
 {% block content %}
-<div class="page-top-banner">
     <h1 class="p-5">Update Profile Information</h1>
 </div>
-    <div class="edit-profile-container">
-        <form method="POST" action="{% url 'edit_profile' request.user %}" enctype="multipart/form-data">
-            {% csrf_token %}
-            {% for field in form %}
-                {{ field | as_crispy_field }}
-            {% endfor %}
+<div class="container">
+    <div class="row">
+        <div class="col card mb-4  mt-1 left top">
+            <div class="card-body">
+                <p class="card-text text-dark">
+                   User Name: <input type="text">
+                   <br>
+                   Fist Name : <input type="text">
+                   <br>
+                   Last Name: <input type="text">
+                   <br>
+                   Email: <input type="text">
+                  
+                </p>
+            </div>
             <button type="submit" class="btn mb-4">Update</button>
         </form>
     </div>
