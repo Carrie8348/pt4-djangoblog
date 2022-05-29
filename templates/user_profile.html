@@ -22,16 +22,11 @@
                 </p>
             </div>
                 <br>
-                <div class="form-group">
-                    <form method="POST">
-                        {% csrf_token %}
-                        {{ form.as_p }}
-                    <a href="edit_profile.html">
-                    <button class="btn btn-dark position-absolute top-100 start-0">Edit</button></a>
-                    </form>
-                        </div> 
-                    </div>       
-                </div>
+            <a href="{% url 'edit_profile' %} " class="btn btn-dark position-absolute 
+            top-100 start-0">
+                Edit</a>   
+                          
+                
             </div>
     </div>
    

@@ -4,7 +4,7 @@ from django.http import HttpResponseRedirect
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from .models import Post, Profile
-from .forms import CommentForm, ProfileForm
+from .forms import CommentForm, ProfileForm, EditProfileForm
 
 
 
@@ -65,7 +65,6 @@ class PostDetail(View):
                 "comment_form": CommentForm,
             },
         )
-    
 
 class PostLike(View):
     
@@ -85,23 +84,21 @@ def profile(request):
     return render(request, "user_profile.html", )
 
 @login_required
-def profile_update(request, pk):
+def profile_update(request):
     
-    user = get_object_or_404(User, pk=pk)
+    user = User.objects.get(username=request.user.username)
 
     if request.method == "POST":
-        form = ProfileForm(request.POST)
+        ProfileForm = EditProfileForm(request.POST, instance=request.user)
     
         if form.is_valid():
-            user.first_name = form.cleaned_data['first_name']
-            user.last_name = form.cleaned_data['last_name']
             user.save()
-        
+            profile_form.save()
+            message.success(request, 'Your profile is updated successfully')
             return HttpResponseRedirect('user_profile', args=[user.id])
-    
+  
     else:
-        default_data = {'first_name': user.first_name, 'last_name': user.last_name }
-        form = ProfileForm(default_data)
+        ProfileForm = EditProfileForm(request.POST)
     
     return render(request, 'edit_profile.html', {'form': form, 'user': user})
 
