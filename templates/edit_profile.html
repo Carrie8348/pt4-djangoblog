@@ -1,9 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div>
+<h1 class="p-5">Update Profile Information 
+    <br>
+    <a href="{% url 'user_profile' %}" class="btn btn-link">Back</a></h1>
 
-<h1 class="p-5">Update Profile Information</h1>
-</div>
+
 <form action="{% url 'edit_profile' %}" method="POST">
     {% csrf_token %}
 <div class="container">
@@ -27,8 +30,9 @@
                    <br>
                    <input type="text">                
                 </p>
+                <input type="submit" value="Update" class="btn btn-danger" />
             </div>
-            <input type="submit" value="Edit" class="put classes here" />
+            
         </form>
     </div>
 {% endblock %}

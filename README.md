@@ -1,108 +1,218 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome Carrie8348,
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## About CrossfitBox.48
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+This is a blog owns by the owner of CrossfitBox.48. 
 
-## Gitpod Reminders
+**Contents**
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
-
-`python3 -m http.server`
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+1. Contents
+2. UX
+3. Wireframes
+4. User Stories
+5. Information Architecture
+    -[Blog App]
+6. Techonologies
+7. Features
+8. Testing
+9. Deployment
+10. Credits
+11. Acknoledgements
 
 ------
 
-## Release History
+## UX
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+**Project Goals**
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+The purpose of having this blog site, is to allowe the owner of CrossfitBox.48 to promote crossfit as an sports, to share the passion and knowledges of this sports. 
+To promote it as a business.
+To create community for people into this sports, and willing to strengthen the skills.
+And to have her members and future members to see the news of the box, and the coming daily WOD arrangements.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+**Site Owner Goals** 
+- Provide the users with clear WOD plan;
+- Connect with users by letting them add comments to the posts;
+- Promote more events in order to get more business.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+**Site User Goals** 
+- View the daily wod plan;
+- View the news of the box;
+- Ability to create an account;
+- Ability to interact with posts and other member's comments.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+**User Story** 
+- As user, I am able to access the site on computer and mobile, tablet;
+- As a user, I am able to easily navigate through the website without confusions;
+- As a user, I am able to read a post list from the main page;
+- As a user, I am able to access to the post detail page;
+- As a user, I am able to comment the post, like the post, or unlike the post;
+- As a user, I am able to edit my profile page;
+- As a superuser/site owner, I am able to approve or disapprove member's comments;
+- As a superuser/site owner, I am able to add or delete memebers from the admin panel;
+- As a superuser/site owner, I am able to post articles;
+- As a superuser/site owner, I am able to put my articles as draft, to finish the editing later;
+- As a superuser/site owner, I am able to delete my post from the admin panel.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+##Design Choices
+**Fonts**
+- ```font-family: Lato, sans-serif;```
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+**Colors**
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+![image](media/E84610.png)
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+**Images**
+- The media files are all stores in the Cloudinary
+- The blog post files are from Google, and I have used Canva to edit the photo and upload to the post.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+##Wireframes
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+##Technologies
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+##Languages
+- HTML
+- CSS
+- JavaScript
+- Python
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+**Libraries & Frameworks**
+- Django
+- Django Crispy Forms
+- Bootstrap
+- Psycopg2
+- Gunicorn
 
-------
+**Tools**
+- pip
+- git
+- github
+- heroku
+- gitpod
+- cloudinary
 
-## FAQ about the uptime script
+##Features
+The website is designed using our application: Blog
 
-**Why have you added this script?**
+**Implemented Features**
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+**User Account**
+- The users can create an account where they can store account infromation 
+    such as first name, last name, emails, and edit their details.
 
-**How will this affect me?**
+**Super User**
+- The super user can add capabilities to the users in the database.
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+**Future features**
+- A frontend admin page for ease of access.
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+## Testing
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+## Deployment
+CrossfitBox48 project was deployed using the git, github. It is hosted on the Heroku,and all media files are stored on cloudinary.
 
-**So….?**
+Before deploying the application, install the following:
+- Python 3
+- Pip
+- Git
+- Heroku CLI
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+**Local Deployment**
+1. From the applications repository, clickes the code button, and opens in gitpod.
+2. The requirements.txt is already existing since the project is based on code institute full template.
+3. Create env.py file to hold environmental variables in the root level:
+```
+    os.environ["DATABASE_URL"] = "postgres://yrrygwxkpmpiil:ea496797147b0eeb571e0960e74629605c2272932896296a7e3108538fad2641@ec2-63-35-156-160.eu-west-1.compute.amazonaws.com:5432/dcsfpvvm2q0qiq"
+    os.environ["SECRET_KEY"] = "randomSecretKey8348"
+    os.environ["CLOUDINARY_URL"] = "cloudinary://743457893464493:56OzhZV1jmcyojn-Z0nxQyJDljQ@carriecloud8348"
+```
+4. When add changes to models, need to migrate the models to the database:
+```python manage.py makemigrations
+    python manage.py migrate
+```
+5. Create a superuser to access the admin panel using the following command:
+```python manage.py createsuperuser
+```
+6. After login to the admin panel, you can add data to be displayed in app for Blog app if required. Refer to database modeling.
 
-**Can I opt out?**
+7. To initiate the application, type the command python manage.py runserver in terminal. The application is now available in browser at the address:
+``` 
+http://localhoset:8000 
+```
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+**Deployment to Heroku**
+
+To deploy the app to Heroku, use the following steps:
+
+1. Ensure you have the following dependancies installed in your app, such as PostgressSQL driver for Python, WSHI HTTP Server and dj database url that connects the the app with the database:
 
 ```
-pkill uptime.sh
-rm .vscode/uptime.sh
+pip3 install psycopg2-binary
+
+pip3 install install gunicorn
+
+pip3 install dj_database_url
+```
+2. To update requirements.txt file containing all of the dependancies:
+```pip3 freeze > requirements.txt```
+3. Create a Procfile that contains the following: ```web: gunicorn main.wsgi:application```
+4. Push these newly created files to repository master.
+5. Login to Heroku and create a new app.
+6. Since the recent incapable of depolying automatically on heroku by clicking buttons, the manual deploy from terminal is required:
+- In terminal type:
+    ```pip3 install heroku ```
+- After it's done, then type login demand:
+    ```heroku login -i```
+- After typing the correct user name and password, logged in successfully from terminal, type:
+   ```heroku git remote -a -the app name- ```
+- When it is successfully remoted, in terminal type push command:
+   ```git push heroku main```
+- Once it's done, the messange in terminal shows deploy successed, open heroku app page, 
+    on the menu bar right side, click three dots button, and choose "Restart all dynos".
+- In Heroku Resources tab, navigate to Add-Ons section and search for Heroku Postgres. 
+- In settings tab, navigate to Reveal Config Vars and add the following variables:
+ ```
+ KEY            	     VALUE                          
+ CLOUDINARY_URL        	YOUR_CLOUDINARY_URL                
+ DATABASE_URL          	YOUR_DATABASE_URL                                   
+ SECRET_KEY            	YOUR_DJANGO_SECRET_KEY            
+
+  ```           
+7. In settings.py in your IDE, temporarily comment out the database and use below code instead (make sure you do not commit!):
+```
+DATABASES = {
+        'default': dj_database_url.parse('POSTGRESS URL')
+    }
+```
+8. In terminal, migrate the models to create the Postgress database using the following commands:
+```
+python manage.py makemigrations
+python manage.py migrate
 ```
 
-**Anything more?**
+9. Create a superuser to access the admin panel using the following command:
+```
+python manage.py createsuperuser
+```
+10. Then follow the instructions to create the superuser.
+11. After login to the admin panel, you can add data to be displayed in your app for GIFTS app if required.
+12. Remove the temporary database from settings.py and uncomment the original code, then push the code to origin.
+13. Deploy to Heroku from terminal.
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
 
----
+##Credits
+Images
+- Images in the post are found on goole, they are all have free-use right, and I have re-modify the on canva.com
 
-Happy coding!
+Code Idea
+- It is based on the Code Institute "I think I therefore blog" project
+
+##Acknowledgements
+
+Site Creator:
+Qian Yilu, under the help of mentor Ronan McClelland, and tutor from Code Institute Ger, Christine, Sean 
+
+
+
