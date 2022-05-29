@@ -89,17 +89,16 @@ def profile_update(request):
     user = User.objects.get(username=request.user.username)
 
     if request.method == "POST":
-        ProfileForm = EditProfileForm(request.POST)
+        form = EditProfileForm(request.POST)
     
-        if ProfileForm.is_valid():
+        if form.is_valid():
             user.save()
-            profile_form.save()
+            form.save()
             message.success(request, 'Your profile is updated successfully')
             return HttpResponseRedirect('user_profile', args=[user.id])
   
     else:
-        ProfileForm = EditProfileForm(request.user)
+       form = EditProfileForm(request.user)
     
-    return render(request, 'edit_profile.html', {'ProfileForm': ProfileForm, 
+    return render(request, 'edit_profile.html', {'form': form, 
                     'user': user})
-

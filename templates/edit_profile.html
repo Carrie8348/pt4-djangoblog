@@ -9,11 +9,12 @@
 
 <form action="{% url 'edit_profile' %}" method="POST">
     {% csrf_token %}
+
 <div class="container">
     <div class="row">
         <div class="col card mb-4  mt-1 left top">
             <div class="card-body">
-                <p class="card-text text-dark">
+                <!-- <p class="card-text text-dark">
                    User Name:
                    <br> 
                    <input type="text">
@@ -29,7 +30,8 @@
                    Email:
                    <br>
                    <input type="text">                
-                </p>
+                </p> -->
+                {{form}}
                 <input type="submit" value="Update" class="btn btn-danger" />
             </div>
             

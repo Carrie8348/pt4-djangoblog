@@ -10,7 +10,6 @@ class CommentForm(forms.ModelForm):
 
 
 class ProfileForm(forms.Form):
-
     user_name = forms.CharField(max_length=30)
     first_name = forms.CharField(max_length=50)
     last_name = forms.CharField(max_length=50)
