@@ -1,4 +1,4 @@
-
+![image](media/mock-up-site.png)
 
 ## About CrossfitBox.48
 
