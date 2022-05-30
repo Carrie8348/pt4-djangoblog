@@ -69,9 +69,10 @@ And to have her members and future members to see the news of the box, and the c
 - The blog post files are from Google, and I have used Canva to edit the photo and upload to the post.
 
 ##Wireframes
-![image](media/frameworks.oo1.png)
-![image](media/frameworks.oo2.png)
-![image](media/frameworks.oo3.png)
+
+![image](media/frameworks001.png)
+![image](media/frameworks002.png)
+![image](media/frameworks003.png)
 
 ##Technologies
 **Languages**
