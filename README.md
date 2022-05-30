@@ -2,7 +2,8 @@
 
 ## About CrossfitBox.48
 
-This is a blog owns by the owner of CrossfitBox.48. 
+This is the 4th portfolio of Code Institute Full Stack Software Development.
+This is a site created for crossiftbox.48. 
 
 **Contents**
 
@@ -68,11 +69,12 @@ And to have her members and future members to see the news of the box, and the c
 - The blog post files are from Google, and I have used Canva to edit the photo and upload to the post.
 
 ##Wireframes
-
+![image](media/frameworks.oo1.png)
+![image](media/frameworks.oo2.png)
+![image](media/frameworks.oo3.png)
 
 ##Technologies
-
-##Languages
+**Languages**
 - HTML
 - CSS
 - JavaScript
@@ -107,8 +109,62 @@ The website is designed using our application: Blog
 
 **Future features**
 - A frontend admin page for ease of access.
+- A frontend user profile edit page.
+- Tags of the posts.
+- Function for user to be able to edit and delete their comments.
+- Create a form for users to contact Admin
 
 ## Testing
+
+It is a manual testing
+
+**Test Sign Up, Sign In Function:**
+- Navigate to （http://cfbox.herokuapp.com）
+- Click 'Register' or 'Login' button on the top bar
+- Enter details
+![image](media/sign-up-form.png)
+![image](media/login.png)
+
+**Test Profile page**
+- After created/logged in, users can click "profile" button to view profile detail
+![image](media/profile.png)
+
+**View post detail**
+- Click on any post on the homepage, will navigate to specific post page
+- There is a button to go back to home page 
+![image](media/post-detail-page.png)
+
+**Comment**
+- As logged-in user, the comment function is available
+![image](media/comment.png)
+- When comment is submit, the message remind user that the comment will be reviewed by Admin
+![image](media/comment-waiting.png)
+- Admin in the comment panel
+![image](media/admin-comment-panel.png)
+- Approved comment 
+![image](media/admin-approve-comment.png)
+- Comment shows up on the page
+![image](media/comment-showsup.png)
+
+**Like and Unlike**
+- As logged-in user, he/she can like or unlike the post by clicking the button, and view the comment amount
+![image](media/buttons.png)
+- When the "like" button is clicked, it will be filled with red color, and the "like" amount will show change
+![image](media/like-button.png)
+- When user click it again, it will go back to hollow heart shape with no red filled up, the "like" amount will show change
+
+**Post**
+- As superuser/admin, he/she can add post to the site.
+![image](media/admin-can-see.png)
+- Click on "Post" and go into the page to add info to the post:
+![image](media/add-post.png)
+- There are post, save as draft as the option
+![image](media/save-button.png)
+- Admin also can delete users, posts, and comments.
+
+**Others**
+- There are also other messages shows up when certain interaction caused by user.
+
 
 ## Deployment
 CrossfitBox48 project was deployed using the git, github. It is hosted on the Heroku,and all media files are stored on cloudinary.
@@ -127,6 +183,7 @@ Before deploying the application, install the following:
     os.environ["DATABASE_URL"] = "postgres://yrrygwxkpmpiil:ea496797147b0eeb571e0960e74629605c2272932896296a7e3108538fad2641@ec2-63-35-156-160.eu-west-1.compute.amazonaws.com:5432/dcsfpvvm2q0qiq"
     os.environ["SECRET_KEY"] = "randomSecretKey8348"
     os.environ["CLOUDINARY_URL"] = "cloudinary://743457893464493:56OzhZV1jmcyojn-Z0nxQyJDljQ@carriecloud8348"
+    os.environ['DEVELOPMENT'] = '1'
 ```
 4. When add changes to models, need to migrate the models to the database:
 ```python manage.py makemigrations
