@@ -4,8 +4,6 @@
 
 <div class="row my-1 p-3">
     <h4>Hi {{ user.username }} 
-        <br>
-    <a href="{% url 'home' %}" class="btn btn-link">Back</a>
     </h4>
 </div>
 
@@ -21,14 +19,14 @@
                    Last Name: {{ user.last_name }}
                    <br>
                    Email: {{ user.email }}
-                   <br>
-                   <a href="{% url 'edit_profile' %} " class="btn btn-danger position-absolute 
-                   top-100 start-10">
+                   <br> 
+                    <br>
+                    <a href="{% url 'home' %}" class="btn btn-danger">Back</a>
                 </p>
                 
             </div>
             
-                Edit</a>   
+                
                           
                 
             </div>

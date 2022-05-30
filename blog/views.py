@@ -3,10 +3,9 @@ from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 from .models import Post, Profile
-from .forms import CommentForm, ProfileForm, EditProfileForm
-
-
+from .forms import CommentForm
 
 class PostList(generic.ListView):
     model = Post
@@ -82,23 +81,3 @@ class PostLike(View):
 def profile(request):
     
     return render(request, "user_profile.html", )
-
-@login_required
-def profile_update(request):
-    
-    user = User.objects.get(username=request.user.username)
-
-    if request.method == "POST":
-        form = EditProfileForm(request.POST)
-    
-        if form.is_valid():
-            user.save()
-            form.save()
-            message.success(request, 'Your profile is updated successfully')
-            return HttpResponseRedirect('user_profile', args=[user.id])
-  
-    else:
-       form = EditProfileForm(request.user)
-    
-    return render(request, 'edit_profile.html', {'form': form, 
-                    'user': user})

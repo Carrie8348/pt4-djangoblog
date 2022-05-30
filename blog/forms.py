@@ -8,25 +8,3 @@ class CommentForm(forms.ModelForm):
         model = Comment
         fields = ('body',)
 
-
-class ProfileForm(forms.Form):
-    user_name = forms.CharField(max_length=30)
-    first_name = forms.CharField(max_length=50)
-    last_name = forms.CharField(max_length=50)
-    email = forms.CharField(max_length=150)
-
-    class Meta:
-        model = User
-        fields = ['username', 'email']
-
-
-class EditProfileForm(forms.Form):
-
-    user_name = forms.CharField(max_length=30)
-    first_name = forms.CharField(max_length=50)
-    last_name = forms.CharField(max_length=50)
-    email = forms.CharField(max_length=150)
-
-    class Meta:
-        model = User
-        fields = ['username', 'email']
