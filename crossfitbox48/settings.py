@@ -33,7 +33,7 @@ DEBUG = False
 
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['cfbox48.heroku.com', 'localhost']
+ALLOWED_HOSTS = ['cfbox48.herokuapp.com', 'localhost']
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
